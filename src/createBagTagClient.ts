@@ -1,5 +1,9 @@
 import createCanvasFromBagTagInformation from './createBagTag.ts'
 
+import helvetica1 from '/public/Helvetica_Bold_Condensed.ttf'
+import helvetica2 from '/public/Helvetica_Bold_Condensed.ttf'
+
+
 const createCanvas = (width, height) => {
   const canvas = document.createElement('canvas');
   canvas.width = width;
@@ -23,8 +27,8 @@ const loadFont = async (name: string, src: string) => {
 }
 
 export default async function loadAndDisplayImage (imgQuerySelector: string) {
-  await loadFont ('Helvetica CBI', '/public/Helvetica Condensed Bold Italic.ttf')
-  await loadFont ('Helvetica BC', '/public/Helvetica_Bold_Condensed.ttf')
+  await loadFont ('Helvetica CBI', helvetica1)
+  await loadFont ('Helvetica BC', helvetica2)
   const base64Img = await createCanvasFromBagTagInformation('H-200', 'Cool Coating', '20 minutes lol', '12345', '2021-09-01', '12345', '1', createCanvas, loadImage)
   //set #bagTag src to base64Img
   const img = document.querySelector<HTMLImageElement>(imgQuerySelector)!
