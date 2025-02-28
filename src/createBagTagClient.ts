@@ -1,4 +1,4 @@
-import createCanvasFromBagTagInformation from './createBagTag.ts'
+import createCanvasFromBagTagInformation from './createBagTag'
 
 import helvetica1 from '../public/Helvetica LT Condensed Bold Italic.ttf'
 import helvetica2 from '../public/Helvetica_Bold_Condensed.ttf'
@@ -26,7 +26,7 @@ const loadFont = async (name: string, src: string) => {
       document.fonts.add(font);
 }
 
-export default async function loadAndDisplayImage (imgQuerySelector: string) {
+export default async function createImage (imgQuerySelector: string) {
   await loadFont ('Helvetica CBI', helvetica1)
   await loadFont ('Helvetica BC', helvetica2)
   const base64Img = await createCanvasFromBagTagInformation('H-200', 'Cool Coating', '20 minutes lol', '12345', '2021-09-01', '12345', '1', createCanvas, loadImage)

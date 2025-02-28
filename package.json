@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "main": "node.ts",
-  "browser": "browser.ts",
+  "browser": {
+    "./src/createBagTagServer.ts": "./src/createBagTagClient.ts"
+  },
 
   "scripts": {
     "dev": "vite",

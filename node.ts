@@ -1,8 +1,8 @@
-import loadImageNode from './src/createBagTagServer'
+import createImage from './src/createBagTagServer'
 
-const loadImageServerSide = loadImageNode
+const createBagtag = createImage
 
-export { loadImageServerSide }
+export { createBagtag }
 
 
 
