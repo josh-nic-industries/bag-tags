@@ -1,6 +1,6 @@
-import createCanvasFromBagTagInformation from './createBagTag'
+import createCanvasFromBagTagInformation from './createBagTag.ts'
 
-import base64ToZpl from './base64ToZpl';
+import base64ToZpl from './base64ToZpl.ts';
 
 const { createCanvas, loadImage, registerFont } = require('canvas');
 
