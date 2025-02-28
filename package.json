@@ -4,13 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "main": "node.ts",
+   "prepare": "npm run build",
   "browser": {
     "./src/createBagTagServer.ts": "./src/createBagTagClient.ts"
   },
 
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
