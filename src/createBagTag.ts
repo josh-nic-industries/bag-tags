@@ -89,7 +89,7 @@ export default async function createCanvasFromBagTagInformation(
         ctx.fillRect(0, 0, width, height);
 
         // Load the first image (background)
-        const image1 = await loadImage('/public/Pris_Black_Label_832x412px.png');
+        const image1 = await loadImage('../public/Pris_Black_Label_832x412px.png');
         const qrCode = await generateQrCode(sku);
         const img = await loadImage(qrCode);
 
