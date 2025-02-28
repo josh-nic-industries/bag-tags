@@ -1,7 +1,7 @@
 import { PNG } from 'pngjs'
 import { rgbaToZ64 } from 'zpl-image'
 
-export default function base64ToZpl(buffer: Buffer) {
+export default function base64ToZpl(buffer) {
     let png = PNG.sync.read(buffer)
 
     let res = rgbaToZ64(png.data, png.width, { black: 47 })

@@ -20,18 +20,18 @@ const loadImage = (src) => {
   });
 };
 
-const loadFont = async (name: string, src: string) => {
+const loadFont = async (name, src) => {
       const font = new FontFace(name, `url("${src}")`, {});
       await font.load()
       document.fonts.add(font);
 }
 
-export default async function createImage (imgQuerySelector: string) {
+export default async function createImage (imgQuerySelector) {
   await loadFont ('Helvetica CBI', helvetica1)
   await loadFont ('Helvetica BC', helvetica2)
   const base64Img = await createCanvasFromBagTagInformation('H-200', 'Cool Coating', '20 minutes lol', '12345', '2021-09-01', '12345', '1', createCanvas, loadImage)
   //set #bagTag src to base64Img
-  const img = document.querySelector<HTMLImageElement>(imgQuerySelector)!
+  const img = document.querySelector<HTMLImageElement>(imgQuerySelector)
   img.src = base64Img
 
   return null
