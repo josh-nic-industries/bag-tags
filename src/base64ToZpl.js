@@ -1,5 +1,6 @@
 import { PNG } from 'pngjs'
-import { rgbaToZ64 } from 'zpl-image'
+import pkg from 'zpl-image';
+const { rgbaToZ64 } = pkg;
 
 export default function base64ToZpl(buffer) {
     let png = PNG.sync.read(buffer)
