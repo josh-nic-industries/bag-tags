@@ -1,9 +1,5 @@
 import createCanvasFromBagTagInformation from './createBagTag.ts'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <img id='bagTag' />
-`
-
 const createCanvas = (width, height) => {
   const canvas = document.createElement('canvas');
   canvas.width = width;
