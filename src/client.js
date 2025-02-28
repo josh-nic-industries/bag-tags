@@ -1,4 +1,4 @@
-import createCanvasFromBagTagInformation from './createBagTag'
+import createCanvasFromBagTagInformation from './createBagTag.js'
 
 import helvetica1 from '../public/Helvetica LT Condensed Bold Italic.ttf'
 import helvetica2 from '../public/Helvetica_Bold_Condensed.ttf'

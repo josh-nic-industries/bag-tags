@@ -1,4 +1,4 @@
-import createCanvasFromBagTagInformation from './createBagTag'
+import createCanvasFromBagTagInformation from './createBagTag.js'
 
 import base64ToZpl from './base64ToZpl';
 /*import { createCanvas, loadImage, registerFont } from 'canvas'
